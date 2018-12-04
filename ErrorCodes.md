@@ -24,6 +24,15 @@ Error specific code: `01`
 
 Full error code: `0501`
 
+JSON Response example: 
+
+```
+{
+  description: "ABCDEFG",
+  err_code: '0501'
+}
+```
+
 ## Error code categories with prefixes
 
 | Category       | Prefix |
