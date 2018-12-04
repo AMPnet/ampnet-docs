@@ -24,7 +24,7 @@ Error specific code: `01`
 
 Full error code: `0501`
 
-# Error code categories with prefixes
+## Error code categories with prefixes
 
 | Category       | Prefix |
 |----------------|--------|
@@ -35,7 +35,7 @@ Full error code: `0501`
 | Wallet         | 05     |
 | Organization   | 06     |
 
-# Registration - Prefix: 01
+## Registration - Prefix: 01
 
 | Error Description                               | Error Code |
 |-------------------------------------------------|------------|
@@ -46,7 +46,7 @@ Full error code: `0501`
 | Failed Email confirmation, non existing token   | 05         |
 | Failed Email confirmation, token expired        | 06         |
 
-# Authentication - Prefix: 02
+## Authentication - Prefix: 02
 
 | Error Description       | Error Code |
 |-------------------------|------------|
@@ -54,7 +54,7 @@ Full error code: `0501`
 | Invalid login method    | 02         |
 | Non existing user login | 03         |
 
-#  Users - Prefix: 03
+## Users - Prefix: 03
 
 | Error Description                                             | Error Code |
 |---------------------------------------------------------------|------------|
@@ -62,19 +62,19 @@ Full error code: `0501`
 | Failed to fetch list of users because incomplete user profile | 02         |
 | Failed to update others profile                               | 03         |
 
-# Countries - Prefix: 04
+## Countries - Prefix: 04
 
 | Error Description            | Error Code |
 |------------------------------|------------|
 | No country with specified ID | 01         |
 
-# Wallet - Prefix: 05
+## Wallet - Prefix: 05
 
 | Error Description                           | Error Code |
 |---------------------------------------------|------------|
 | Active user cannot create additional wallet | 01         |
 
-# Organization - Prefix: 06
+## Organization - Prefix: 06
 
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
