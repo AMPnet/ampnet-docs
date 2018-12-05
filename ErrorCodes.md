@@ -54,22 +54,24 @@ JSON Response example:
 | Failed Email confirmation, invalid token format | 04         |
 | Failed Email confirmation, non existing token   | 05         |
 | Failed Email confirmation, token expired        | 06         |
+| Social exception                                | 07         |
 
 ## Authentication - Prefix: 02
 
 | Error Description       | Error Code |
 |-------------------------|------------|
-| Invalid credentials     | 01         |
-| Invalid login method    | 02         |
-| Non existing user login | 03         |
+| Non existing user login | 01         |
+| Invalid credentials     | 02         |
+| Invalid login method    | 03         |
 
 ## Users - Prefix: 03
 
 | Error Description                                             | Error Code |
 |---------------------------------------------------------------|------------|
-| Failed fetch list of users (not admin)                        | 01         |
-| Failed to fetch list of users because incomplete user profile | 02         |
-| Failed to update others profile                               | 03         |
+| Non existing user                                             | 01         |
+| User does not have admin role                                 | 02         |
+| User profile is incomplete                                    | 03         |
+| User cannot access other user profile                         | 04         |
 
 ## Countries - Prefix: 04
 
@@ -81,11 +83,15 @@ JSON Response example:
 
 | Error Description                           | Error Code |
 |---------------------------------------------|------------|
-| Active user cannot create additional wallet | 01         |
+| User does not have a wallet                 | 01         |
+| Active user cannot create additional wallet | 02         |
 
 ## Organization - Prefix: 06
 
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
-| Cannot approve organization without privilege                                         | 01         |
-| Failed invite user to organization without organization user role, privilege PW_USERS | 02         |
+| Non existing organization                                                             | 01         |
+| Cannot approve organization without privilege                                         | 02         |
+| Failed invite user to organization without organization user role, privilege PW_USERS | 03         |
+| User is already a member of this organization                                         | 04         |
+| User is already invited                                                               | 05         |
