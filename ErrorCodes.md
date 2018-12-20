@@ -85,6 +85,7 @@ JSON Response example:
 |---------------------------------------------|------------|
 | User does not have a wallet                 | 01         |
 | Active user cannot create additional wallet | 02         |
+| User does not have enough funds on wallet   | 03         |
 
 ## Organization - Prefix: 06
 
@@ -95,3 +96,16 @@ JSON Response example:
 | Failed invite user to organization without organization user role, privilege PW_USERS | 03         |
 | User is already a member of this organization                                         | 04         |
 | User is already invited                                                               | 05         |
+
+
+## Project - Prefix: 07
+
+| Error Description                                                                     | Error Code |
+|---------------------------------------------------------------------------------------|------------|
+| Non existing project                                                                  | 01         |
+| Invalid date                                                                          | 02         |
+| Project has expired                                                                   | 03         |
+| User has exceeded max funds per project                                               | 04         |
+| Funding is below project minimum                                                      | 05         |
+| Project has reached expected funding                                                  | 06         |
+| Project is not active                                                                 | 07         |
