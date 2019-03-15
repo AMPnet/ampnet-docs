@@ -39,7 +39,7 @@ This is an example of the transaction
   },
   "tx_id" : number,
   "info" : {
-    "tx_type" : "InvestTX | CreateProjectTX | CreateOrgTX | ProjectAllowanceTX ",
+    "tx_type" : "CreateOrgTx | CreateProjectTx | InvestAllowanceTx | InvestTx",
     "title" : "string",
     "desctiption" : "string"
   },
