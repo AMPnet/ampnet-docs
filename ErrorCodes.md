@@ -60,18 +60,13 @@ JSON Response example:
 
 | Error Description       | Error Code |
 |-------------------------|------------|
-| Non existing user login | 01         |
-| Invalid credentials     | 02         |
-| Invalid login method    | 03         |
+| Invalid login method    | 01         |
 
 ## Users - Prefix: 03
 
 | Error Description                                             | Error Code |
 |---------------------------------------------------------------|------------|
 | Non existing user                                             | 01         |
-| User does not have admin role                                 | 02         |
-| User profile is incomplete                                    | 03         |
-| User cannot access other user profile                         | 04         |
 
 ## Countries - Prefix: 04
 
@@ -86,6 +81,7 @@ JSON Response example:
 | User does not have a wallet                 | 01         |
 | Active user cannot create additional wallet | 02         |
 | User does not have enough funds on wallet   | 03         |
+| Wallet with this hash already exists        | 04         |
 
 ## Organization - Prefix: 06
 
@@ -96,6 +92,7 @@ JSON Response example:
 | Failed invite user to organization without organization user role, privilege PW_USERS | 03         |
 | User is already a member of this organization                                         | 04         |
 | User is already invited                                                               | 05         |
+| Organization with this name already exists                                            | 06         |
 
 
 ## Project - Prefix: 07
@@ -109,3 +106,21 @@ JSON Response example:
 | Funding is below project minimum                                                      | 05         |
 | Project has reached expected funding                                                  | 06         |
 | Project is not active                                                                 | 07         |
+| Min investment per user is higher than max investment per user                        | 08         |
+| Expected funding is too high                                                          | 09         |
+| Max funding per user is too high                                                      | 10         |
+
+
+## Internal - Prefix: 08
+
+| Error Description                                                                     | Error Code |
+|---------------------------------------------------------------------------------------|------------|
+| Could not upload document to IPFS                                                     | 01         |
+| Failed gRPC call                                                                      | 02         |
+
+## Transaction - Prefix: 09
+
+| Error Description                                                                     | Error Code |
+|---------------------------------------------------------------------------------------|------------|
+| Non existing transaction                                                              | 01         |
+| Missing companion id                                                                  | 02         |
