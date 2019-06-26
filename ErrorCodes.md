@@ -52,9 +52,10 @@ JSON Response example:
 | Signup information complete but invalid         | 02         |
 | Signup failed because user exists               | 03         |
 | Failed Email confirmation, invalid token format | 04         |
-| Failed Email confirmation, non existing token   | 05         |
-| Failed Email confirmation, token expired        | 06         |
-| Social exception                                | 07         |
+| Failed Email confirmation, token expired        | 05         |
+| Social exception                                | 06         |
+| Identyum exception                              | 07         |
+| Identyum exception: failed to get token         | 08         |
 
 ## Authentication - Prefix: 02
 
@@ -68,17 +69,13 @@ JSON Response example:
 |---------------------------------------------------------------|------------|
 | Non existing user                                             | 01         |
 
-## Countries - Prefix: 04
-
-| Error Description            | Error Code |
-|------------------------------|------------|
-| No country with specified ID | 01         |
+## Countries - Prefix: 04 - Removed
 
 ## Wallet - Prefix: 05
 
 | Error Description                           | Error Code |
 |---------------------------------------------|------------|
-| User does not have a wallet                 | 01         |
+| Missing wallet                              | 01         |
 | Active user cannot create additional wallet | 02         |
 | User does not have enough funds on wallet   | 03         |
 | Wallet with this hash already exists        | 04         |
@@ -115,8 +112,9 @@ JSON Response example:
 
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
-| Could not upload document to IPFS                                                     | 01         |
-| Failed gRPC call                                                                      | 02         |
+| Could not upload document on cloud file storage                                       | 01         |
+| Invalid value in request                                                              | 02         |
+| Failed gRPC call                                                                      | 50         |
 
 ## Transaction - Prefix: 09
 
