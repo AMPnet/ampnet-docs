@@ -39,10 +39,13 @@ JSON Response example:
 |----------------|--------|
 | Registration   | 01     |
 | Authentication | 02     |
-| Users          | 03     |
-| Countries      | 04     |
+| User           | 03     |
+| ~~Countries~~  | 04     |
 | Wallet         | 05     |
 | Organization   | 06     |
+| Project        | 07     |
+| Internal       | 08     |
+| Transaction    | 09     |
 
 ## Registration - Prefix: 01
 
@@ -56,18 +59,23 @@ JSON Response example:
 | Social exception                                | 06         |
 | Identyum exception                              | 07         |
 | Identyum exception: failed to get token         | 08         |
+| User Info already exists                        | 09         |
 
 ## Authentication - Prefix: 02
 
-| Error Description       | Error Code |
-|-------------------------|------------|
-| Invalid login method    | 01         |
+| Error Description               | Error Code |
+|---------------------------------|------------|
+| Invalid login method            | 01         |
+| Missing forgot password token   | 02         |
+| Forgot password token expired   | 03         |
 
 ## Users - Prefix: 03
 
 | Error Description                                             | Error Code |
 |---------------------------------------------------------------|------------|
 | Non existing user                                             | 01         |
+| Invalid bank code for user bank account                       | 02         |
+| Different password                                            | 03         |
 
 ## Countries - Prefix: 04 - Removed
 
@@ -79,6 +87,16 @@ JSON Response example:
 | Active user cannot create additional wallet | 02         |
 | User does not have enough funds on wallet   | 03         |
 | Wallet with this hash already exists        | 04         |
+| Missing deposit                             | 05         |
+| Deposit is already minted                   | 06         |
+| Deposit is not approved                     | 07         |
+| Unapproved deposit exists                   | 08         |
+| Missing withdraw                            | 09         |
+| Unapproved withdraw exists                  | 10         |
+| Withdraw already approved                   | 11         |
+| Withdraw not approved                       | 12         |
+| Withdraw already burned                     | 13         |
+| Wallet is not activated by the administrator| 14         |
 
 ## Organization - Prefix: 06
 
@@ -90,7 +108,7 @@ JSON Response example:
 | User is already a member of this organization                                         | 04         |
 | User is already invited                                                               | 05         |
 | Organization with this name already exists                                            | 06         |
-
+| Missing a privilege for this organization                                             | 07         |
 
 ## Project - Prefix: 07
 
@@ -107,18 +125,19 @@ JSON Response example:
 | Expected funding is too high                                                          | 09         |
 | Max funding per user is too high                                                      | 10         |
 
-
 ## Internal - Prefix: 08
 
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
 | Could not upload document on cloud file storage                                       | 01         |
 | Invalid value in request                                                              | 02         |
-| Failed gRPC call                                                                      | 50         |
+| Failed gRPC call to blockchain service                                                | 03         |
+| Failed gRPC call to user service                                                      | 04         |
+| Failed gRPC call to project service                                                   | 05         |
 
 ## Transaction - Prefix: 09
 
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
 | Non existing transaction                                                              | 01         |
-| Missing companion id                                                                  | 02         |
+| Missing companion data                                                                | 02         |
