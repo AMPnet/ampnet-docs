@@ -134,6 +134,7 @@ JSON Response example:
 | Failed gRPC call to blockchain service                                                | 03         |
 | Failed gRPC call to user service                                                      | 04         |
 | Failed gRPC call to project service                                                   | 05         |
+| Failed gRPC call to mail service                                                      | 06         |
 
 ## Transaction - Prefix: 09
 
