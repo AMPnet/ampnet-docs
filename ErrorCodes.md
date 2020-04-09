@@ -74,7 +74,7 @@ JSON Response example:
 | Error Description                                             | Error Code |
 |---------------------------------------------------------------|------------|
 | Non existing user                                             | 01         |
-| Invalid bank code for user bank account                       | 02         |
+| Invalid bank account data                                     | 02         |
 | Different password                                            | 03         |
 
 ## Countries - Prefix: 04 - Removed
@@ -97,6 +97,7 @@ JSON Response example:
 | Withdraw not approved                       | 12         |
 | Withdraw already burned                     | 13         |
 | Wallet is not activated by the administrator| 14         |
+| Missing revenue payout                      | 15         |
 
 ## Organization - Prefix: 06
 
@@ -124,6 +125,7 @@ JSON Response example:
 | Min investment per user is higher than max investment per user                        | 08         |
 | Expected funding is too high                                                          | 09         |
 | Max funding per user is too high                                                      | 10         |
+| Invalid project ROI                                                                   | 11         |
 
 ## Internal - Prefix: 08
 
