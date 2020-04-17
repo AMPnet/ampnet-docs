@@ -1,22 +1,20 @@
-# AMPnet API Error Code Docs
+# AMPnet API Error Response Docs
 
 # Introduction
 
-AMPnet backend returns error codes when errors happen (duh). The codes are structured in a way that should be easy to read and identify on-the-fly.
+AMPnet backend returns error response when errors happen (duh). 
+Error response contains:
+* `err_code` - structured in a way that should be easy to read and identify on-the-fly. 
+* `description` - defined in the tables below
+* `message` - generated depending on the problem and provides more information.
 
-Each error code consists of two parts
+Each error code consists of two parts:
 1. Two digits for error category
 2. Two digits for specific error withing the category
 
 ## Example
 
-Error description: `Active user cannot create an additional wallet`
-
-Full Error: `com.ampnet.crowdfundingbackend.exception.ResourceAlreadyExistsException`
-
-Error category: `ampnet.SignupError`
-
-Specific Error: `InvalidRequestException`
+Specific Error: `Missing wallet`
 
 Error category code: `05`
 
@@ -24,12 +22,17 @@ Error specific code: `01`
 
 Full error code: `0501`
 
+Description: `Missing wallet`
+
+Message: `Wallet missing for owner: 89fb3b1c-9c0a-11e9-a2a3-2a2ae2dbcce4`
+
 JSON Response example: 
 
 ```
 {
-  description: "ABCDEFG",
-  err_code: '0501'
+  err_code: "0501",
+  description: "Missing wallet",
+  message: "Wallet missing for owner: 89fb3b1c-9c0a-11e9-a2a3-2a2ae2dbcce4"
 }
 ```
 
@@ -47,7 +50,7 @@ JSON Response example:
 | Internal       | 08     |
 | Transaction    | 09     |
 
-## Registration - Prefix: 01
+### Registration - Prefix: 01
 
 | Error Description                               | Error Code |
 |-------------------------------------------------|------------|
@@ -61,7 +64,7 @@ JSON Response example:
 | Identyum exception: failed to get token         | 08         |
 | User Info already exists                        | 09         |
 
-## Authentication - Prefix: 02
+### Authentication - Prefix: 02
 
 | Error Description               | Error Code |
 |---------------------------------|------------|
@@ -69,7 +72,7 @@ JSON Response example:
 | Missing forgot password token   | 02         |
 | Forgot password token expired   | 03         |
 
-## Users - Prefix: 03
+### Users - Prefix: 03
 
 | Error Description                                             | Error Code |
 |---------------------------------------------------------------|------------|
@@ -77,9 +80,9 @@ JSON Response example:
 | Invalid bank account data                                     | 02         |
 | Different password                                            | 03         |
 
-## Countries - Prefix: 04 - Removed
+### Countries - Prefix: 04 - Removed
 
-## Wallet - Prefix: 05
+### Wallet - Prefix: 05
 
 | Error Description                           | Error Code |
 |---------------------------------------------|------------|
@@ -99,7 +102,7 @@ JSON Response example:
 | Wallet is not activated by the administrator| 14         |
 | Missing revenue payout                      | 15         |
 
-## Organization - Prefix: 06
+### Organization - Prefix: 06
 
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
@@ -111,7 +114,7 @@ JSON Response example:
 | Organization with this name already exists                                            | 06         |
 | Missing a privilege for this organization                                             | 07         |
 
-## Project - Prefix: 07
+### Project - Prefix: 07
 
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
@@ -127,7 +130,7 @@ JSON Response example:
 | Max funding per user is too high                                                      | 10         |
 | Invalid project ROI                                                                   | 11         |
 
-## Internal - Prefix: 08
+### Internal - Prefix: 08
 
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
@@ -138,7 +141,7 @@ JSON Response example:
 | Failed gRPC call to project service                                                   | 05         |
 | Failed gRPC call to mail service                                                      | 06         |
 
-## Transaction - Prefix: 09
+### Transaction - Prefix: 09
 
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
