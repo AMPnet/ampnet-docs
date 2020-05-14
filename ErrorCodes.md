@@ -140,6 +140,7 @@ JSON Response example:
 | Failed gRPC call to user service                                                      | 04         |
 | Failed gRPC call to project service                                                   | 05         |
 | Failed gRPC call to mail service                                                      | 06         |
+| Database exception                                                                    | 07         |
 
 ### Transaction - Prefix: 09
 
