@@ -143,6 +143,7 @@ JSON Response example:
 | Database exception                                                                    | 07         |
 | Invalid request data                                                                  | 08         |
 | Failed gRPC call to wallet service                                                    | 09         |
+| Could not generate pdf from data                                                      | 10         |
 
 ### Transaction - Prefix: 09
 
