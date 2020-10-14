@@ -112,7 +112,9 @@ JSON Response example:
 | User is already a member of this organization                                         | 04         |
 | User is already invited                                                               | 05         |
 | Organization with this name already exists                                            | 06         |
-| Missing a privilege for this organization                                             | 07         |
+| ~~Missing a privilege for this organization~~                                         | ~~07~~     |
+| Organization membership missing                                                       | 08         |
+| Invalid organization invitation                                                       | 07         |
 
 ### Project - Prefix: 07
 
