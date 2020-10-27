@@ -79,6 +79,8 @@ JSON Response example:
 | Non existing user                                             | 01         |
 | Invalid bank account data                                     | 02         |
 | Different password                                            | 03         |
+| Invalid user role                                             | 04         |
+| User does not have a privilege                                | 05         |
 
 ### Countries - Prefix: 04 - Removed
 
