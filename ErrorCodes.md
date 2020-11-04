@@ -155,3 +155,10 @@ JSON Response example:
 |---------------------------------------------------------------------------------------|------------|
 | Non existing transaction                                                              | 01         |
 | Missing companion data                                                                | 02         |
+
+### Coop - Prefix: 10
+
+| Error Description                                                                     | Error Code |
+|---------------------------------------------------------------------------------------|------------|
+| Missing coop                                                                          | 01         |
+| Coop already exists                                                                   | 02         |
