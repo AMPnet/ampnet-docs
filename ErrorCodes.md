@@ -71,6 +71,9 @@ JSON Response example:
 | Invalid login method            | 01         |
 | Missing forgot password token   | 02         |
 | Forgot password token expired   | 03         |
+| Invalid JWT                     | 04         |
+| Missing JWT                     | 05         |
+| Failed to register JWT          | 06         |
 
 ### Users - Prefix: 03
 
