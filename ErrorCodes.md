@@ -129,7 +129,7 @@ JSON Response example:
 | Invalid date                                                                          | 02         |
 | Project has expired                                                                   | 03         |
 | User has exceeded max funds per project                                               | 04         |
-| Funding is below project minimum                                                      | 05         |
+| ~~Funding is below project minimum~~                                                  | 05         |
 | Project has reached expected funding                                                  | 06         |
 | Project is not active                                                                 | 07         |
 | Min investment per user is higher than max investment per user                        | 08         |
