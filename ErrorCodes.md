@@ -63,6 +63,7 @@ JSON Response example:
 | Identyum exception                              | 07         |
 | Identyum exception: failed to get token         | 08         |
 | User Info already exists                        | 09         |
+| reCAPTCHA verification failed                   | 10         |
 
 ### Authentication - Prefix: 02
 
