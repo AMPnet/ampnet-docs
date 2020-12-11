@@ -56,15 +56,15 @@ JSON Response example:
 
 | Error Description                               | Error Code |
 |-------------------------------------------------|------------|
-| Incomplete signup information                   | 01         |
-| Signup information complete but invalid         | 02         |
-| Signup failed because user exists               | 03         |
+| Invalid signup data                             | 01         |
+| ~~Signup information complete but invalid~~     | 02         |
+| Email already used                              | 03         |
 | Failed Email confirmation, invalid token format | 04         |
 | Failed Email confirmation, token expired        | 05         |
 | Social exception                                | 06         |
-| Identyum exception                              | 07         |
-| Identyum exception: failed to get token         | 08         |
-| User Info already exists                        | 09         |
+| ~~Identyum exception~~                          | 07         |
+| ~~Identyum exception: failed to get token~~     | 08         |
+| ~~User Info already exists~~                    | 09         |
 | reCAPTCHA verification failed                   | 10         |
 
 ### Authentication - Prefix: 02
@@ -77,16 +77,18 @@ JSON Response example:
 | Invalid JWT                     | 04         |
 | Missing JWT                     | 05         |
 | Failed to register JWT          | 06         |
+| Invalid username or password    | 07         |
 
 ### Users - Prefix: 03
 
 | Error Description                                             | Error Code |
 |---------------------------------------------------------------|------------|
-| Non existing user                                             | 01         |
+| Missing user defined in JWT                                   | 01         |
 | Invalid bank account data                                     | 02         |
-| Different password                                            | 03         |
-| Invalid user role                                             | 04         |
-| User does not have a privilege                                | 05         |
+| Invalid old password                                          | 03         |
+| ~~Invalid user role~~                                         | 04         |
+| UMissing privilege to access data                             | 05         |
+| User missing                                                  | 06         |
 
 ### Countries - Prefix: 04 - Removed
 
@@ -115,14 +117,14 @@ JSON Response example:
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
 | Non existing organization                                                             | 01         |
-| Cannot approve organization without privilege                                         | 02         |
-| Failed invite user to organization without organization user role, privilege PW_USERS | 03         |
+| ~~Cannot approve organization without privilege~~                                     | 02         |
+| ~~Failed invite user to organization without organization user role~~                 | 03         |
 | User is already a member of this organization                                         | 04         |
 | User is already invited                                                               | 05         |
 | Organization with this name already exists                                            | 06         |
-| ~~Missing a privilege for this organization~~                                         | ~~07~~     |
+| Missing a privilege for this organization                                             | 07         |
 | Organization membership missing                                                       | 08         |
-| Invalid organization invitation                                                       | 07         |
+| Invalid organization invitation                                                       | 09         |
 
 ### Project - Prefix: 07
 
