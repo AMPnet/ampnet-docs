@@ -171,3 +171,26 @@ JSON Response example:
 |---------------------------------------------------------------------------------------|------------|
 | Missing coop                                                                          | 01         |
 | Coop already exists                                                                   | 02         |
+
+### Middleware - Prefix: 11
+
+| Error Description                                                                           | Error Code |
+|---------------------------------------------------------------------------------------------|------------|
+| Transaction not signed. Aborting.                                                           | 01         |
+| Transaction not mined.                                                                      | 02         |
+| Invalid contract called! Contract not part of Cooperative contracts collection.             | 03         |
+| Transaction verification error.                                                             | 04         |
+| Transaction not found.                                                                      | 05         |
+| Wallet not found!                                                                           | 10         |
+| Wallet creation transaction failed!                                                         | 11         |
+| Wallet creation transaction still pending!                                                  | 12         |
+| Wallet already exists!                                                                      | 13         |
+| Error while creating Group. Invalid Coop contract provided as argument!                     | 20         |
+| Error while creating Project. Invalid Group contract provided as argument!                  | 30         |
+| Error while creating Sell Offer. Invalid Project contract provided as argument!             | 31         |
+| Ae Sdk error was thrown.                                                                    | 40         |
+| Unknown error occured while dry running transaction. Contact system administrator!          | 50         |
+| Error: precondition failed.                                                                 | 60         |
+| Cooperative does not exist!                                                                 | 70         |
+| Error while deploying Contract. Malformed code. Can only deploy official AMPnet Contracts.  | 90         |
+| Unknown error occured.                                                                      | 99         |
