@@ -49,6 +49,8 @@ JSON Response example:
 | Project        | 07     |
 | Internal       | 08     |
 | Transaction    | 09     |
+| Coop           | 10     |
+| Middleware     | 11     |
 
 ### Registration - Prefix: 01
 
@@ -137,6 +139,7 @@ JSON Response example:
 | Expected funding is too high                                                          | 09         |
 | Max funding per user is too high                                                      | 10         |
 | Invalid project ROI                                                                   | 11         |
+| Missing project owner privilege                                                       | 12         |
 
 ### Internal - Prefix: 08
 
@@ -158,7 +161,7 @@ JSON Response example:
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
 | Non existing transaction                                                              | 01         |
-| Missing companion data                                                                | 02         |
+| Missing transaction data                                                              | 02         |
 
 ### Coop - Prefix: 10
 
