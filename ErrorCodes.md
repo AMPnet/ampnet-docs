@@ -166,3 +166,10 @@ JSON Response example:
 |---------------------------------------------------------------------------------------|------------|
 | Missing coop                                                                          | 01         |
 | Coop already exists                                                                   | 02         |
+
+### Middleware - Prefix: 11
+
+| Error Description                                                                     | Error Code |
+|---------------------------------------------------------------------------------------|------------|
+| Some blockchain exception (@filip write your error codes)                             | 01         |
+
