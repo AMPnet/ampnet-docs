@@ -174,23 +174,87 @@ JSON Response example:
 
 ### Middleware - Prefix: 11
 
-| Error Description                                                                           | Error Code |
-|---------------------------------------------------------------------------------------------|------------|
-| Transaction not signed. Aborting.                                                           | 01         |
-| Transaction not mined.                                                                      | 02         |
-| Invalid contract called! Contract not part of Cooperative contracts collection.             | 03         |
-| Transaction verification error.                                                             | 04         |
-| Transaction not found.                                                                      | 05         |
-| Wallet not found!                                                                           | 10         |
-| Wallet creation transaction failed!                                                         | 11         |
-| Wallet creation transaction still pending!                                                  | 12         |
-| Wallet already exists!                                                                      | 13         |
-| Error while creating Group. Invalid Coop contract provided as argument!                     | 20         |
-| Error while creating Project. Invalid Group contract provided as argument!                  | 30         |
-| Error while creating Sell Offer. Invalid Project contract provided as argument!             | 31         |
-| Ae Sdk error was thrown.                                                                    | 40         |
-| Unknown error occured while dry running transaction. Contact system administrator!          | 50         |
-| Error: precondition failed.                                                                 | 60         |
-| Cooperative does not exist!                                                                 | 70         |
-| Error while deploying Contract. Malformed code. Can only deploy official AMPnet Contracts.  | 90         |
-| Unknown error occured.                                                                      | 99         |
+| Error Description                                                                                                  | Error Code |
+|--------------------------------------------------------------------------------------------------------------------|------------|
+| Transaction not signed. Aborting.                                                                                  | 01         |
+| Transaction not mined.                                                                                             | 02         |
+| Invalid contract called! Contract not part of Cooperative contracts collection.                                    | 03         |
+| Transaction verification error.                                                                                    | 04         |
+| Transaction not found.                                                                                             | 05         |
+| Wallet not found!                                                                                                  | 10         |
+| Wallet creation transaction failed!                                                                                | 11         |
+| Wallet creation transaction still pending!                                                                         | 12         |
+| Wallet already exists!                                                                                             | 13         |
+| Error while creating Group. Invalid Coop contract provided as argument!                                            | 20         |
+| Error while creating Project. Invalid Group contract provided as argument!                                         | 30         |
+| Error while creating Sell Offer. Invalid Project contract provided as argument!                                    | 31         |
+| Ae Sdk error was thrown.                                                                                           | 40         |
+| Unknown error occured while dry running transaction. Contact system administrator!                                 | 50         |
+| Claim ownership feature is disabled. Aborting.                                                                     | 600        |
+| Trying to claim ownership more than once. Aborting.                                                                | 601        |
+| Token not initalized!                                                                                              | 602        |
+| Only Platform Manager can make this action!                                                                        | 603        |
+| Sender wallet not activated. Activate your blockchain wallet before sending funds.                                 | 604        |
+| Receiver wallet not activated. Transfer aborted.                                                                   | 605        |
+| Wallet not activated. Activate your wallet before approving funds withdrawal.                                      | 606        |
+| Amount of funds to be approved for withdrawal must be grater than 0.                                               | 607        |
+| Amount of funds to transfer must be grater than 0.                                                                 | 608        |
+| Insufficient funds on user's wallet to make the transfer.                                                          | 609        |
+| Sender wallet not activated. Sender has to have activated blockchain wallet before approving funds for transfer.   | 610        |
+| Receiver wallet not activated. Receiver has to have activated blockchain wallet before receiving any funds.        | 611        |
+| Only registered platform users with active wallets can get their deposits approved. Aborting.                      | 612        |
+| Only registered platform users with active wallets can withdraw funds. Aborting.                                   | 613        |
+| Value to be withdrawn is bigger than allowed.                                                                      | 614        |
+| Value to be withdrawn is not present.                                                                              | 615        |
+| Only Token Issuer can make this action!                                                                            | 616        |
+| Only registered platform user with activated wallet can make this action!                                          | 617        |
+| Can not create organization. Creator must be registered platform user with activated wallet.                       | 618        |
+| Member to be added to organization has to be registered platform user with active wallet.                          | 619        |
+| Trying to accept organization invite which does not exist!                                                         | 620        |
+| Trying to accept organization invite but it was already accepted!                                                  | 621        |
+| Only organization owner can make this action!                                                                      | 622        |
+| Only registered platform member with active wallet can make this action.                                           | 623        |
+| In order to make this action organization must have active wallet!                                                 | 624        |
+| Must be organization owner to be able to create project for funding.                                               | 625        |
+| Organization must have an active wallet before it can create new project for funding.                              | 626        |
+| Only organization owner can allow or disallow unconditional investment cancellation!                               | 627        |
+| Only platform manager can manually add new investments!                                                            | 628        |
+| Can not add new investments. Project already completely funded.                                                    | 629        |
+| Can not add new investments. Project expired before it was completely funded.                                      | 630        |
+| Can not cancel investment!                                                                                         | 631        |
+| Project investment cap not reached! Can not withdraw funds.                                                        | 632        |
+| Only organization owner can request withdrawal of project funds.                                                   | 633        |
+| Can not withdraw funds while revenue share payout is in process.                                                   | 634        |
+| Revenue share payout has to be started before actual payout process is executed.                                   | 635        |
+| Can not invest, project already completely funded.                                                                 | 636        |
+| Can not invest zero tokens!                                                                                        | 637        |
+| Can not invest. Insufficient funds.                                                                                | 638        |
+| User's investment will surpass maximum per user investment for this project. Aborting.                             | 639        |
+| User's investment does not meet required minimum per user investment for this project. Aborting.                   | 640        |
+| User's investment will make total funds raised greater than project's investment cap. Aborting.                    | 641        |
+| User's investment will leave tiny fraction of project non-funded. Enlarge your investment. Aborting.               | 642        |
+| Project funding has ended.                                                                                         | 643        |
+| Only organization owner can initiate revenue shares payout.                                                        | 644        |
+| Can not start revenue share payout on project which is still in funding phase.                                     | 645        |
+| Revenue is zero. Aborting.                                                                                         | 646        |
+| Can not start revenue share payout. Project balance too low. Mint revenue to project wallet and try again.         | 647        |
+| Can not start revenue share payout. It is already started!                                                         | 648        |
+| Wallet not activated. Wallet has to be activated before making this action.                                        | 649        |
+| Amount of shares to be approved for transfer must be grater than 0.                                                | 650        |
+| Shares balance too low!                                                                                            | 651        |
+| Can not transfer shares. Project is still in funding phase.                                                        | 652        |
+| Can not transfer shares. Project is in revenue share payout state.                                                 | 653        |
+| Can not transfer shares. Insufficient amount of shares to transfer.                                                | 654        |
+| Can not transfer shares. Need approval.                                                                            | 655        |
+| Can not transfer shares. Sender not active Cooperative member.                                                     | 656        |
+| Can not transfer shares. Receiver not active Cooperative member.                                                   | 657        |
+| Can not place sell offer. Associated project not funded completely.                                                | 658        |
+| Can not place sell offer. Not enough shares to sell.                                                               | 659        |
+| Sell offer already settled.                                                                                        | 660        |
+| Insufficient funds.                                                                                                | 661        |
+| Only seller can accept counter offer.                                                                              | 662        |
+| Tried to accept non-existing counter offer.                                                                        | 663        |
+| Only seller can cancel offer.                                                                                      | 664        |
+| Cooperative does not exist!                                                                                        | 70         |
+| Error while deploying Contract. Malformed code. Can only deploy official AMPnet Contracts.                         | 90         |
+| Unknown error occured.                                                                                             | 99         |
