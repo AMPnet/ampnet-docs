@@ -171,6 +171,7 @@ JSON Response example:
 |---------------------------------------------------------------------------------------|------------|
 | Missing coop                                                                          | 01         |
 | Coop already exists                                                                   | 02         |
+| Coop creating disabled                                                                | 03         |
 
 ### Middleware - Prefix: 11
 
