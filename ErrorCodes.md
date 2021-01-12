@@ -142,6 +142,7 @@ JSON Response example:
 | Max funding per user is too high                                                      | 10         |
 | Invalid project ROI                                                                   | 11         |
 | Missing project owner privilege                                                       | 12         |
+| Missing project write privilege                                                       | 13         |
 
 ### Internal - Prefix: 08
 
