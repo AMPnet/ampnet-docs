@@ -66,6 +66,8 @@ JSON Response example:
 | ~~Identyum exception: failed to get token~~     | 08         |
 | ~~User Info already exists~~                    | 09         |
 | reCAPTCHA verification failed                   | 10         |
+| Missing Veriff session.                         | 11         |
+| SignUp for coop is disabled                     | 12         |
 
 ### Authentication - Prefix: 02
 
