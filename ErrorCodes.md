@@ -160,6 +160,7 @@ JSON Response example:
 | Invalid request data                                                                  | 08         |
 | Failed gRPC call to wallet service                                                    | 09         |
 | Could not generate pdf from data                                                      | 10         |
+| Could not encrypt data                                                                | 11         |
 
 ### Transaction - Prefix: 09
 
