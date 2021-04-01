@@ -51,6 +51,7 @@ JSON Response example:
 | Transaction    | 09     |
 | Coop           | 10     |
 | Middleware     | 11     |
+| Middleware     | 12     |           
 
 ### Registration - Prefix: 01
 
@@ -161,6 +162,7 @@ JSON Response example:
 | Failed gRPC call to wallet service                                                    | 09         |
 | Could not generate pdf from data                                                      | 10         |
 | Could not encrypt data                                                                | 11         |
+| Failed to get default mail translations                                               | 12         |
 
 ### Transaction - Prefix: 09
 
@@ -263,3 +265,11 @@ JSON Response example:
 | Cooperative does not exist!                                                                                        | 70         |
 | Error while deploying Contract. Malformed code. Can only deploy official AMPnet Contracts.                         | 90         |
 | Unknown error occured.                                                                                             | 99         |
+
+### Cms - Prefix: 12
+
+| Error Description                                                                     | Error Code |
+|---------------------------------------------------------------------------------------|------------|
+| Required field in mail is missing                                                     | 01         |
+| Mail type is not defined                                                              | 02         |
+| Language is not defined                                                               | 03         |
