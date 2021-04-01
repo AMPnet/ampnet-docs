@@ -51,7 +51,7 @@ JSON Response example:
 | Transaction    | 09     |
 | Coop           | 10     |
 | Middleware     | 11     |
-| Middleware     | 12     |           
+| Cms            | 12     |           
 
 ### Registration - Prefix: 01
 
