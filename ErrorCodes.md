@@ -81,6 +81,7 @@ JSON Response example:
 | Missing JWT                     | 05         |
 | Failed to register JWT          | 06         |
 | Invalid username or password    | 07         |
+| Invalid refresh token           | 08         |
 
 ### Users - Prefix: 03
 
@@ -163,6 +164,7 @@ JSON Response example:
 | Could not generate pdf from data                                                      | 10         |
 | Could not encrypt data                                                                | 11         |
 | Failed to get default mail translations                                               | 12         |
+| Failed to validate JWT                                                                | 13         |
 
 ### Transaction - Prefix: 09
 
