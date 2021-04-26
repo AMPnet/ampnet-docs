@@ -147,6 +147,7 @@ JSON Response example:
 | Invalid project ROI                                                                   | 11         |
 | Missing project owner privilege                                                       | 12         |
 | Missing project write privilege                                                       | 13         |
+| Missing project information                                                           | 14         |
 
 ### Internal - Prefix: 08
 
