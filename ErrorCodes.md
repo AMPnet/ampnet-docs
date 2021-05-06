@@ -93,6 +93,7 @@ JSON Response example:
 | ~~Invalid user role~~                                         | 04         |
 | UMissing privilege to access data                             | 05         |
 | User missing                                                  | 06         |
+| No user with info                                             | 07         |
 
 ### Countries - Prefix: 04 - Removed
 
