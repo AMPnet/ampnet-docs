@@ -167,6 +167,7 @@ JSON Response example:
 | Could not encrypt data                                                                | 11         |
 | Failed to get default mail translations                                               | 12         |
 | Failed to validate JWT                                                                | 13         |
+| Could not generate xlsx file                                                          | 14         |
 
 ### Transaction - Prefix: 09
 
