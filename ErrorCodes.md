@@ -278,3 +278,4 @@ JSON Response example:
 | Required field in mail is missing                                                     | 01         |
 | Mail type is not defined                                                              | 02         |
 | Language is not defined                                                               | 03         |
+| Content is not found                                                                  | 04         |
