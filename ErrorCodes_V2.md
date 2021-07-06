@@ -79,4 +79,4 @@ JSON Response example:
 # Web3Provider
 
 Web3Provider service is a proxy caching service to the blockchain. Providers take JSON-RPC requests and return a response.
-Specification for error codes can be found on `https://eth.wiki/json-rpc/json-rpc-error-codes-improvement-proposal.`
+Specification for error codes can be found on https://eth.wiki/json-rpc/json-rpc-error-codes-improvement-proposal.
