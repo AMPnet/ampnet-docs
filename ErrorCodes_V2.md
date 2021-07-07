@@ -4,13 +4,13 @@
 
 AMPnet backend returns error response when errors happen (duh). 
 Error response contains:
-* `err_code` - structured in a way that should be easy to read and identify on-the-fly. 
-* `description` - defined in the tables below
+* `err_code` - structured in a way that should be easy to read and identify on-the-fly, 
+* `description` - defined in the tables below,
 * `message` - generated depending on the problem and provides more information.
 
 Each error code consists of two parts:
-1. Two digits for error category
-2. Two digits for specific error withing the category
+1. Two digits for error category,
+2. Two digits for specific error withing the category.
 
 ## Example
 
@@ -65,7 +65,6 @@ JSON Response example:
 | Error Description                                             | Error Code |
 |---------------------------------------------------------------|------------|
 | Missing user defined in JWT                                   | 01         |
-
 
 ### Cms - Prefix: 04
 
