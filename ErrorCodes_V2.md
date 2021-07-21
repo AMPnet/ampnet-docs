@@ -50,15 +50,19 @@ JSON Response example:
 | Error Description                               | Error Code |
 |-------------------------------------------------|------------|
 | Invalid signup data                             | 01         |
-| Missing Veriff session.                         | 02         |
+| Failed email confrimation, token expired        | 05         |
+| Missing Veriff session                          | 11         |
 
 ### Authentication - Prefix: 02
 
 | Error Description               | Error Code |
 |---------------------------------|------------|
-| Invalid refresh token           | 01         |
-| Payload missing                 | 02         |
-| Signed payload invalid          | 03         |
+| Invalid JWT                     | 04         |
+| Missing JWT                     | 05         |
+| Failed to register JWT          | 06         |
+| Invalid refresh token           | 08         |
+| Payload missing                 | 09         |
+| Signed payload invalid          | 10         |
 
 ### Users - Prefix: 03
 
