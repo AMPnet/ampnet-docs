@@ -69,6 +69,7 @@ JSON Response example:
 | Error Description                                             | Error Code |
 |---------------------------------------------------------------|------------|
 | Missing user defined in JWT                                   | 01         |
+| Failed to get Pinata JWT for user                             | 02         |
 
 ### Cms - Prefix: 04
 
