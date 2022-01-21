@@ -43,7 +43,8 @@ JSON Response example:
 | Registration   | 01     |
 | Authentication | 02     |
 | User           | 03     |
-| Cms            | 04     |
+| Blockchain     | 04     |
+| IPFS           | 05     |
 
 ### Registration - Prefix: 01
 
@@ -71,14 +72,19 @@ JSON Response example:
 | Missing user defined in JWT                                   | 01         |
 | Failed to get Pinata JWT for user                             | 02         |
 
-### Cms - Prefix: 04
-
+### Blockchain - Prefix: 04
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
-| Required field in mail is missing                                                     | 01         |
-| Mail type is not defined                                                              | 02         |
-| Language is not defined                                                               | 03         |
-| Content is not found                                                                  | 04         |
+| Blockchain id not supported                                                           | 01         |
+| Blockchain data is not provided                                                       | 02         |
+| Blockchain contract version is not supported                                          | 03         |
+| Blockchain contract read error                                                        | 04         |
+| Blockchain contract event read error                                                  | 05         |
+
+### IPFS - Prefix: 05
+| Error Description                                                                     | Error Code |
+|---------------------------------------------------------------------------------------|------------|
+| IPFS upload failed                                                                    | 01         |
 
 # Web3Provider
 
