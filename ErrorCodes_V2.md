@@ -45,6 +45,7 @@ JSON Response example:
 | User           | 03     |
 | Blockchain     | 04     |
 | IPFS           | 05     |
+| Payout         | 06     |
 
 ### Registration - Prefix: 01
 
@@ -85,6 +86,12 @@ JSON Response example:
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
 | IPFS upload failed                                                                    | 01         |
+
+### Payout - Prefix: 06
+| Error Description                                                                     | Error Code |
+|---------------------------------------------------------------------------------------|------------|
+| Merkle tree not found for specified payout parameters                                 | 01         |
+| Payout does not exist for specified account                                           | 02         |
 
 # Web3Provider
 
