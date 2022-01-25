@@ -72,6 +72,7 @@ JSON Response example:
 |---------------------------------------------------------------|------------|
 | Missing user defined in JWT                                   | 01         |
 | Failed to get Pinata JWT for user                             | 02         |
+| User is not asset owner                                       | 03         |
 
 ### Blockchain - Prefix: 04
 | Error Description                                                                     | Error Code |
