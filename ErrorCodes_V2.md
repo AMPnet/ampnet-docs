@@ -91,8 +91,9 @@ JSON Response example:
 ### Payout - Prefix: 06
 | Error Description                                                                     | Error Code |
 |---------------------------------------------------------------------------------------|------------|
-| Merkle tree not found for specified payout parameters                                 | 01         |
-| Payout does not exist for specified account                                           | 02         |
+| Create payout task not found                                                          | 01         |
+| Merkle tree not found for specified payout parameters                                 | 02         |
+| Payout does not exist for specified account                                           | 03         |
 
 # Web3Provider
 
